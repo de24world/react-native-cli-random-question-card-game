@@ -1,9 +1,17 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import Home from './screens/home';
+import {StatusBar, SafeAreaView, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import RouterTabs from './routes/router';
 
 export default function App() {
-  return <Home />;
+  return (
+    <NavigationContainer>
+      <StatusBar />
+      <SafeAreaView style={{flex: 1}}>
+        <RouterTabs />
+      </SafeAreaView>
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({});
