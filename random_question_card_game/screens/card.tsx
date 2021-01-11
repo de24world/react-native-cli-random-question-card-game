@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
 import data from '../data/question(en).json';
-import CardJsons from '../data/Interfaces';
+import {QuestionsProps} from '../data/Interfaces';
 
-const Card: React.FC<CardJsons> = () => {
+const Card: React.FC<QuestionsProps> = ({id, text}) => {
   const [questions, setQuestions] = useState(data);
 
   const getQuestion = () => {

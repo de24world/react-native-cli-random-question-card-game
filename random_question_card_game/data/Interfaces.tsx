@@ -1,8 +1,4 @@
-export interface CardJsons {
-  data: {
-    questions: {
-      id: number;
-      text: string;
-    };
-  };
+export interface QuestionsProps {
+  id: number;
+  text: string;
 }
