@@ -6,7 +6,7 @@ import {Button, Card, Title} from 'react-native-paper';
 import data from '../../data/question(en).json';
 import {QuestionsProps} from '../../data/Interfaces';
 
-const FlipCard = () => {
+const BackCard = () => {
   const [questions, setQuestions] = useState(data);
 
   const getQuestion = () => {
@@ -19,39 +19,25 @@ const FlipCard = () => {
   }, []);
 
   return (
-    <>
-      <View style={styles.container}>
-        <Title>Flip</Title>
-
-        <View></View>
-
-        <View>
-          <Card style={styles.card}>
-            <Text>{questions.id}/100</Text>
-            <Text>{questions.text}?</Text>
-            <Button mode="contained" onPress={getQuestion}>
-              Next
-            </Button>
-          </Card>
-        </View>
-      </View>
-    </>
+    <View>
+      <Card style={styles.card}>
+        <Text>{questions.id}/100</Text>
+        <Text>{questions.text}?</Text>
+        <Button mode="contained" onPress={getQuestion}>
+          Next
+        </Button>
+      </Card>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
   card: {
-    width: 300,
-    height: 500,
+    width: 200,
+    height: 200,
     borderWidth: 5,
     borderRadius: 10,
   },
 });
 
-export default FlipCard;
+export default BackCard;

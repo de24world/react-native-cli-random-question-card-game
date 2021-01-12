@@ -9,4 +9,10 @@ export const globalStyles = StyleSheet.create({
     // fontFamily: 'sample'
     fontSize: 18,
   },
+  card: {
+    width: 200,
+    height: 200,
+    borderWidth: 5,
+    borderRadius: 10,
+  },
 });
