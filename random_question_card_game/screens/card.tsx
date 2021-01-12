@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, Button} from 'react-native';
 import data from '../data/question(en).json';
 import {QuestionsProps} from '../data/Interfaces';
 
-const Card: React.FC<QuestionsProps> = ({id, text}) => {
+const Card = () => {
   const [questions, setQuestions] = useState(data);
 
   const getQuestion = () => {
