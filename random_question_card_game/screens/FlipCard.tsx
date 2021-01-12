@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
+
+import {Card, Title} from 'react-native-paper';
+
 import data from '../data/question(en).json';
 import {QuestionsProps} from '../data/Interfaces';
 
-const Card = () => {
+const FlipCard = () => {
   const [questions, setQuestions] = useState(data);
 
   const getQuestion = () => {
@@ -17,6 +20,10 @@ const Card = () => {
 
   return (
     <>
+      <Card style={styles.card}>
+        <Title>title</Title>
+      </Card>
+
       <View>
         <Text>{questions.id}/100</Text>
         <Text>{questions.text}?</Text>
@@ -26,6 +33,11 @@ const Card = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  card: {
+    width: 300,
+    height: 500,
+  },
+});
 
-export default Card;
+export default FlipCard;
